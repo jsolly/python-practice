@@ -668,30 +668,30 @@ Python Search Algorithmns
 """
 
 
-def bubble_sort(arr):
-    n = len(arr)
-
-    for u in range(n):
-        for v in range(0, n - u - 1):
-            if arr[v] > arr[v + 1]:
-                arr[v], arr[v + 1] = arr[v + 1], arr[v]
-    return arr
-
-
-def selection_sort(arr):
-    indexing_length = range(0, len(arr) - 1)
-
-    for i in indexing_length:
-        min_value = i
-
-        for j in range(i + 1, len(arr)):
-            if arr[j] < arr[min_value]:
-                min_value = j
-
-        if min_value != i:
-            arr[min_value], arr[i] = arr[i], arr[min_value]
-
-    return arr
-
-
-print(selection_sort([1, 6, 3, 6, 3, 8, 23, 4, 2, 1, 7]))
+# def bubble_sort(arr):
+#     n = len(arr)
+#
+#     for u in range(n):
+#         for v in range(0, n - u - 1):
+#             if arr[v] > arr[v + 1]:
+#                 arr[v], arr[v + 1] = arr[v + 1], arr[v]
+#     return arr
+#
+#
+# def selection_sort(arr):
+#     indexing_length = range(0, len(arr) - 1)
+#
+#     for i in indexing_length:
+#         min_value = i
+#
+#         for j in range(i + 1, len(arr)):
+#             if arr[j] < arr[min_value]:
+#                 min_value = j
+#
+#         if min_value != i:
+#             arr[min_value], arr[i] = arr[i], arr[min_value]
+#
+#     return arr
+#
+#
+# print(selection_sort([1, 6, 3, 6, 3, 8, 23, 4, 2, 1, 7]))

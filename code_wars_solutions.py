@@ -2,6 +2,41 @@ import re
 import string
 
 
+# if bmi <= 18.5 return "Underweight"
+#
+# if bmi <= 25.0 return "Normal"
+#
+# if bmi <= 30.0 return "Overweight"
+#
+# if bmi > 30 return "Obese"
+# Write function bmi that calculates body mass index (bmi = weight / height ^ 2).
+
+
+def order(words: str) -> str:
+    if not words:
+        return ""
+    words_split = words.split()
+    new_list = [0] * len(words_split)
+    for word in words_split:
+        for character in word:
+            if character.isdigit():
+                character_num = int(character)
+                new_list[character_num - 1] = str(word)
+    return " ".join(new_list)
+
+
+def bmi(weight: int, height: int) -> str:
+    bmi = weight / pow(height, 2)
+    if bmi <= 18.5:
+        return "Underweight"
+    if bmi <= 25:
+        return "Normal"
+    if bmi <= 30:
+        return "Overweight"
+    else:
+        return "Obese"
+
+
 def valid_spacing2(s):
     s_split = s.split()
     join_s_split = " ".join(s_split)

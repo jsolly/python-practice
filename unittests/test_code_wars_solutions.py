@@ -4,6 +4,23 @@ from GitHub.PythonPractice import code_wars_solutions
 
 
 class TestClass(unittest.TestCase):
+    def test_order(self):
+        self.assertEqual(
+            code_wars_solutions.order("is2 Thi1s T4est 3a"), "Thi1s is2 3a T4est"
+        )
+        self.assertEqual(
+            code_wars_solutions.order("4of Fo1r pe6ople g3ood th5e the2"),
+            "Fo1r the2 g3ood 4of th5e pe6ople",
+        )
+        self.assertEqual(code_wars_solutions.order(""), "")
+
+    def test_bmi(self):
+        self.assertEqual(code_wars_solutions.bmi(50, 1.80), "Underweight")
+        self.assertEqual(code_wars_solutions.bmi(80, 1.80), "Normal")
+        self.assertEqual(code_wars_solutions.bmi(90, 1.80), "Overweight")
+        self.assertEqual(code_wars_solutions.bmi(110, 1.80), "Obese")
+        self.assertEqual(code_wars_solutions.bmi(50, 1.50), "Normal")
+
     def test_valid_spacing(self):
         self.assertEqual(code_wars_solutions.valid_spacing2("Hello world"), True)
         self.assertEqual(code_wars_solutions.valid_spacing2(" Hello world"), False)
